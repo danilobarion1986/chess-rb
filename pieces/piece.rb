@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'piece_options'
 
 class Piece
@@ -10,7 +12,11 @@ class Piece
     @state = PieceOptions::STATES[:alive]
   end
 
-  def change_state(state = :dead)
-    @state = PieceOptions::STATES[state]
+  def kill
+    @state = PieceOptions::STATES[:dead]
+  end
+
+  def resurrect
+    @state = PieceOptions::STATES[:alive]
   end
 end
