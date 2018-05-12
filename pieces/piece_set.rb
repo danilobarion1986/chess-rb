@@ -6,7 +6,7 @@ require_relative './piece_options'
 class PieceSet
   include PieceOptions
 
-  attr_accessor :pieces, :owner
+  attr_reader :pieces, :owner
   PIECES_AND_QUANTITIES = { king: 1, queen: 1, rook: 2, bishop: 2, knight: 2, pawn: 8 }
 
   def initialize(player)
